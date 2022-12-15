@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 require('express-async-errors');
 const express = require('express');
+
 const cors = require('./app/middlewares/cors');
 const errorHandler = require('./app/middlewares/errorHandler');
 
