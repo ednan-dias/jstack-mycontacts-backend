@@ -1,5 +1,4 @@
 module.exports = (err, req, res, next) => {
-  console.log('### Error Handler');
-  console.log(err);
+  console.log('### Error Handler', err);
   res.sendStatus(500);
 };

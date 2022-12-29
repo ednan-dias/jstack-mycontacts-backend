@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 require('express-async-errors');
 const express = require('express');
 
