@@ -2,6 +2,8 @@ const { Client } = require('pg');
 
 let options = {};
 
+console.log(process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'DEV') {
   options = {
     host: 'localhost',
