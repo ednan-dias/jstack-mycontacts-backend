@@ -1,5 +1,7 @@
 const { Client } = require('pg');
 
+console.log({ host: process.env.RDS_HOSTNAME });
+
 let options = {};
 
 if (process.env.NODE_ENV === 'DEV') {
