@@ -8,7 +8,7 @@ const client = new Client({
   database: 'mycontacts',
 });
 
-client.connect();
+// client.connect();
 
 exports.query = async (query, values) => {
   const { rows } = await client.query(query, values);
