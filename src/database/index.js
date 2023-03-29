@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 let options = {};
 
-console.log(process.env);
+console.log(process.env.env);
 
 if (process.env.NODE_ENV === 'DEV') {
   options = {
