@@ -4,6 +4,7 @@
   "description": "API to store contacts",
   "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "author": "Ednan Dias",
