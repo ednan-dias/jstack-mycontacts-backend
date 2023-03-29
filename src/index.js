@@ -1,15 +1,10 @@
 require('express-async-errors');
 const express = require('express');
 
-const { networkInterfaces } = require('os');
 const cors = require('./app/middlewares/cors');
 const errorHandler = require('./app/middlewares/errorHandler');
 
 const routes = require('./routes');
-
-const nets = networkInterfaces();
-
-console.log(nets);
 
 const app = express();
 
