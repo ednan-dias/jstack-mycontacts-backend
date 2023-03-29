@@ -1,4 +1,4 @@
-const { Client, types } = require('pg');
+const { Client } = require('pg');
 
 let options = {};
 
@@ -19,6 +19,8 @@ if (process.env.NODE_ENV === 'DEV') {
     database: 'mycontacts',
   };
 }
+
+console.log({ options });
 
 const client = new Client(options);
 
