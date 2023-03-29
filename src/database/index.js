@@ -2,8 +2,6 @@ const { Client } = require('pg');
 
 let options = {};
 
-console.log(process.env.env);
-
 if (process.env.NODE_ENV === 'DEV') {
   options = {
     host: 'localhost',
@@ -22,11 +20,9 @@ if (process.env.NODE_ENV === 'DEV') {
   };
 }
 
-console.log({ options });
-
 const client = new Client(options);
 
-// client.connect();
+client.connect();
 
 exports.query = async (query, values) => {
   const { rows } = await client.query(query, values);
