@@ -20,6 +20,8 @@ if (process.env.NODE_ENV === 'DEV') {
   };
 }
 
+console.log({ options });
+
 const client = new Client(options);
 
 client.connect();
