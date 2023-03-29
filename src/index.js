@@ -9,7 +9,7 @@ const routes = require('./routes');
 
 const nets = networkInterfaces();
 
-const ipv4 = nets.enp7s0[0].address;
+console.log(nets);
 
 const app = express();
 
@@ -22,4 +22,4 @@ app.use(cors);
 app.use(routes);
 app.use(errorHandler);
 
-app.listen(3001, () => console.log(`🔥 Server is running at http://${ipv4}:3001`));
+app.listen(3001, () => console.log('🔥 Server is running at http://localhost:3001'));
