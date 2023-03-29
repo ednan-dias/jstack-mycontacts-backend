@@ -25,8 +25,9 @@ if (process.env.NODE_ENV === 'DEV') {
 console.log({ options });
 
 const client = new Client(options);
+console.log({ client });
 
-client.connect();
+// client.connect();
 
 exports.query = async (query, values) => {
   const { rows } = await client.query(query, values);
