@@ -10,6 +10,7 @@ const routes = require('./routes');
 const app = express();
 
 app.get('/', (req, res) => {
+  console.log('Server is running');
   res.send('Server is running');
 });
 
