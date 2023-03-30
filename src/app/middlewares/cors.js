@@ -1,6 +1,7 @@
 module.exports = (req, res, next) => {
   const allowedOrigins = [
-    'http://localhost:3000',
+    'http://localhost:3000/',
+    'https://mycontacts-ednandias.netlify.app/',
   ];
 
   const origin = req.header('Origin');
