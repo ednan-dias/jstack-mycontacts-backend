@@ -1,26 +1,16 @@
 const { Client } = require('pg');
 
-console.log({ host: process.env.RDS_HOSTNAME });
+const {
+  DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_PORT, DB_DATABASE,
+} = process.env;
 
-let options = {};
-
-if (process.env.NODE_ENV === 'DEV') {
-  options = {
-    host: 'localhost',
-    port: 5432,
-    user: 'root',
-    password: 'root',
-    database: 'mycontacts',
-  };
-} else if (process.env.NODE_ENV === 'PROD') {
-  options = {
-    host: process.env.RDS_HOSTNAME,
-    user: process.env.RDS_USERNAME,
-    password: process.env.RDS_PASSWORD,
-    port: process.env.RDS_PORT,
-    database: 'mycontacts',
-  };
-}
+const options = {
+  host: DB_HOSTNAME,
+  user: DB_USERNAME,
+  password: DB_PASSWORD,
+  port: DB_PORT,
+  database: DB_DATABASE,
+};
 
 const client = new Client(options);
 

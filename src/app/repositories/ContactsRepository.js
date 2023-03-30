@@ -8,6 +8,7 @@ class ContactsRepository {
      FROM contacts
      LEFT JOIN categories ON categories.id = contacts.category_id
      ORDER BY contacts.name ${direction};`);
+
     return rows;
   }
 

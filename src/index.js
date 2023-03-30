@@ -11,7 +11,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   console.log('Server is running');
-  res.send('Server is running');
+  return res.send('Server is running');
 });
 
 app.use(express.json());
@@ -19,4 +19,4 @@ app.use(cors);
 app.use(routes);
 app.use(errorHandler);
 
-app.listen(3001, () => console.log('🔥 Server is running at http://localhost:3001'));
+app.listen(3001, () => console.log('Server is running at http://localhost:3001 🔥'));
